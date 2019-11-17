@@ -1,0 +1,30 @@
+## 方法重载
+* 创建对象：给对象分配到的存储空间取了一个名字
+* 方法：给某个动作取名，再而可以引用所有方法
+* 方法重载：让相同名字而形式参数不同的构造器同时存在
+```
+class myObject {
+	String age ;
+	myObject(){
+		System.out.println("新来对象的初始年龄为0岁");
+	}
+	myObject(int age ){
+		this.age = age+"";
+		System.out.println("新来对象的初始年龄为"+this.age+"岁");
+	}
+	myObject(String age) {
+		this.age = age;
+		System.out.println("新来对象的初始年龄为"+this.age+"岁");
+	}
+}
+public class Solution{
+	public static void main(String[] args) {
+		new myObject();
+		new myObject("11");
+		new myObject(12);
+	}
+}
+//新来对象的初始年龄为0岁
+//新来对象的初始年龄为11岁
+//新来对象的初始年龄为12岁
+```
